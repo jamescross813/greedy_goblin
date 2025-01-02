@@ -24,3 +24,13 @@ add_gamer({'name':'Crystal Brewer','availability': ["Thursday", "Friday", "Satur
 add_gamer({'name':'James Barnes Jr.','availability': ["Tuesday", "Wednesday", "Thursday", "Sunday"]}, gamers)
 add_gamer({'name':'Michel Trujillo','availability': ["Monday", "Tuesday", "Wednesday"]}, gamers)
 
+def caluclate_availability(gamers_list, availability_frequency):
+    for i in gamers_list:
+       for j in i['availability']:
+         for k in count_availability:
+            if k == j:
+               count_availability[k] +=1
+         return count_availability
+
+caluclate_availability(gamers, count_availability)
+
