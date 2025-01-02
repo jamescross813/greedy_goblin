@@ -45,3 +45,18 @@ def find_best_night(availability_table):
    return best_night
 
 find_best_night(count_availability)
+
+
+def available_on_night(gamers, game_night):
+   attending_game_night = []
+   for a in gamers:
+      for b in a['availability']:
+         if b == game_night:
+            attending_game_night.append(a['name'])
+   print(attending_game_night)
+   return attending_game_night
+
+available_on_night(gamers, find_best_night(count_availability))
+
+
+
