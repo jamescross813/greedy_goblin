@@ -53,10 +53,16 @@ def available_on_night(gamers, game_night):
       for b in a['availability']:
          if b == game_night:
             attending_game_night.append(a['name'])
-   print(attending_game_night)
+   # print(attending_game_night)
    return attending_game_night
 
-available_on_night(gamers, find_best_night(count_availability))
+# available_on_night(gamers, find_best_night(count_availability))
 
+form_email = 'Hello {}! This week on {} we will be hosting {}. So come and join us!'
 
+def send_email(gamers_who_can_attend, day, game):
+   for x in gamers_who_can_attend:
+      # print(x)
+      print(form_email.format(x, day, game))
 
+send_email(available_on_night(gamers, find_best_night(count_availability)), find_best_night(count_availability), "Abruptly Goblins!")
