@@ -34,3 +34,14 @@ def caluclate_availability(gamers_list, availability_frequency):
 
 caluclate_availability(gamers, count_availability)
 
+
+def find_best_night(availability_table):
+   best_night= '' 
+   big_num = 0
+   for x in availability_table:
+      if availability_table[x] > big_num:
+         big_num = availability_table[x]
+         best_night = x
+   return best_night
+
+find_best_night(count_availability)
